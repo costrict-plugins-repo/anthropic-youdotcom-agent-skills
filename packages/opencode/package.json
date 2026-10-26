@@ -1,0 +1,45 @@
+{
+  "name": "@youdotcom-oss/opencode",
+  "version": "2.0.0",
+  "description": "You.com OpenCode 2 plugin with bundled skills and remote MCP setup",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youdotcom-oss/agent-skills.git",
+    "directory": "packages/opencode"
+  },
+  "author": {
+    "name": "You.com",
+    "email": "support@you.com",
+    "url": "https://you.com"
+  },
+  "keywords": [
+    "you.com",
+    "opencode",
+    "opencode-plugin",
+    "web-search",
+    "research",
+    "content-extraction",
+    "mcp"
+  ],
+  "type": "module",
+  "main": "./plugin.ts",
+  "exports": {
+    ".": "./plugin.ts"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "bun scripts/build.ts",
+    "check": "tsc --noEmit",
+    "pretest": "bun run build",
+    "test": "bun test"
+  },
+  "peerDependencies": {
+    "@opencode/plugin": ">=2.0.0"
+  },
+  "devDependencies": {
+    "@opencode/plugin": "^2.0.27"
+  }
+}
